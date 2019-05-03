@@ -1,13 +1,19 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto|Nunito");
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Roboto|Nunito+Sans");
 body {
-  background: #6fcb9f;
+  background: #f7a992;
   font-family: 'Roboto', sans-serif;
   margin: 0; }
 
 h1.logo {
   color: #fff;
-  font-family: 'Roboto', sans-serif;
-  font-size: 4rem; }
+  font-family: 'Nunito Sans', cursive;
+  font-size: 4em; }
+
+h1.end {
+  position: relative;
+  color: #fff;
+  opacity: 0;
+  transition: 0.8s ease-in-out; }
 
 #container {
   height: 100vh;
@@ -37,12 +43,12 @@ h1.logo {
   right: 20px;
   bottom: 10px;
   font-size: 40px;
-  color: #6fcb9f;
+  color: #f7a992;
   float: right;
   cursor: pointer;
   z-index: 2; }
   #next-btn:hover {
-    color: #94d9b8; }
+    color: #facec2; }
 
 #prev-btn {
   position: absolute;
@@ -54,7 +60,7 @@ h1.logo {
   float: right;
   cursor: pointer; }
   #prev-btn:hover {
-    color: #6fcb9f; }
+    color: #facec2; }
 
 #input-group {
   position: relative;
@@ -70,8 +76,7 @@ h1.logo {
     font-weight: bold;
     outline: 0;
     background: transparent;
-    box-shadow: none;
-    font-family: 'Roboto', sans-serif; }
+    box-shadow: none; }
   #input-group #input-label {
     position: absolute;
     pointer-events: none;
@@ -87,21 +92,28 @@ h1.logo {
     font-size: 11px;
     font-weight: normal;
     color: #9e9e9e; }
-  #input-group #input-progress {
-    border-bottom: 3px solid #6fcb9f;
-    width: 100%;
-    transition: width 0.6s ease-in-out; }
+
+#input-progress {
+  border-bottom: 3px solid #f7a992;
+  width: 0;
+  transition: width 0.6s ease-in-out; }
 
 #progress-bar {
   position: absolute;
-  background: #ffe28a;
-  height: 10px; }
+  background: #facec2;
+  height: 10px;
+  width: 0;
+  transition: width 0.5s ease-in-out; }
+
+.close #next-btn,
+.close #prev-btn {
+  color: #fff; }
 
 .error #input-progress {
-  border-color: #fb2e01; }
+  border-color: #ff2d26; }
 
 .error #next-btn {
-  color: #fb2e01; }
+  color: #ff2d26; }
 
 @media (max-width: 600px) {
   #form-box {
